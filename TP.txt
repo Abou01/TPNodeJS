@@ -1,0 +1,47 @@
+
+Les API créé sont :
+
+Connexion:
+
+route:  localhost:8000/login/connect
+method : POST
+param obligatoire: mail - mdp
+données de test :
+
+mail : abou@gmail.com
+mdp : 123456
+
+mail :djim@gmail.com
+mdp : 12345
+
+Recherche multi-critère :
+
+route:  localhost:8000/search
+method : GET
+
+Si aucun paramètre n'est ajouté la recherche renvoie toutes les annonces
+
+param facultatif : annonceId - country - city - isBooked
+
+Updating profiles :
+
+route:  localhost:8000/users/update
+method : PATCH
+param obligatoire: id
+param facultatif : firstname - lastname - mail - mdp
+
+Emailing :
+
+route:  localhost:8000/mail/send
+method : POST
+param obligatoire: to - subject - body
+
+Pour l'envoie des mails j'ai utlisé un compte smtp ethereal qui permet de simuler l'envoie de mail et de le visualiser via une URL transmise.
+
+Booking:
+
+route:  localhost:8000/booking
+method : POST
+param obligatoire: annonceId
+
+Pour le booking j'ai simulé la mise en session de l'utisateur courant en affectant directement les données de l'utilisateur 1 : abou@gmail.com.
